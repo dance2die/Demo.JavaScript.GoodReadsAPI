@@ -2,6 +2,9 @@ var path = require('path');
 
 // https://www.slightedgecoder.com/2017/05/22/setting-es6-environment-asp-net-mvc-5/
 module.exports = {
+    node: {
+        __dirname: true
+    },
     entry: './js/index.js',
     output: {
         filename: 'bundle.js',
