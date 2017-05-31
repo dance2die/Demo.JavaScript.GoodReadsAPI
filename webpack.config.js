@@ -21,7 +21,19 @@ module.exports = {
     },
     // https://github.com/StephenGrider/ReduxSimpleStarter/blob/master/webpack.config.js
     devServer: {
-        historyApiFallback: true,
-        contentBase: './'
+        port: 9000,
+        headers: {
+            "User-Agent": "Fiddler",
+            "Access-Control-Allow-Origin": "http://localhost:9000",
+            "Access-Control-Allow-Credentials": "true"
+        },
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
     }
 }
