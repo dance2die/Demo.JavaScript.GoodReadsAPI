@@ -1,6 +1,7 @@
 var path = require('path');
 var $ = require('jquery');
-var apiConfig = require('../apikey.js');;
+var apiConfig = require('../apikey.js');
+var defiant = require('defiant');
 
 var log = `
     goodreadsKey=${apiConfig.goodreadsKey};
@@ -23,8 +24,9 @@ $(document).ready(() => {
             format: "json"
         },
         success: (yqlResponse) => {
-            let json = $.parseJSON(yqlResponse);
-            console.log(json);
+            // DefiantJS XPath query for user shelf for "read" section.
+            let search = JSON.search(yqlResponse, "//*/user_shelf[name='read']");
+            console.log(search);
         },
         error:(request, status, error) => {
             alert(`error: ${error}`);
