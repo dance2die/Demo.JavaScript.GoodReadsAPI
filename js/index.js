@@ -20,10 +20,11 @@ $(document).ready(() => {
         url: yqlUrl,
         data: {
             q: q,
-            format: "xml"
+            format: "json"
         },
-        success: (response) => {
-            alert(response);
+        success: (yqlResponse) => {
+            let json = $.parseJSON(yqlResponse);
+            console.log(json);
         },
         error:(request, status, error) => {
             alert(`error: ${error}`);
