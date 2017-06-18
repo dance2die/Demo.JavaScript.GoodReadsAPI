@@ -16,6 +16,7 @@ $(document).ready(() => {
 
     let yqlAjax = new YqlAjax();
     yqlAjax.ajax(goodReadsURL).done((yqlResponse) => {
+        console.log("success 111");
         // DefiantJS XPath query for user shelf for "read" section.
         let search = JSON.search(yqlResponse, "//*/user_shelf[name='read']");
         console.log(search);
