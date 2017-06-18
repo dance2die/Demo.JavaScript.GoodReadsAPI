@@ -2085,6 +2085,10 @@ process@^0.11.0:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
+proxify-url@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/proxify-url/-/proxify-url-1.0.1.tgz#9bc5787f5183feb65d61d89b98649b9a6eff699a"
+
 proxy-addr@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-1.1.4.tgz#27e545f6960a44a627d9b44467e35c1b6b4ce2f3"
